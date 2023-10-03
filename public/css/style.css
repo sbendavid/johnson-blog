@@ -917,6 +917,10 @@ button.btn:hover {
 }
 
 .about .about-form,
+.about .about-form img {
+    height: 460px;
+    width: 500px;
+}
 .about .about-info {
     margin-bottom: 45px;
 }
