@@ -1,1 +1,74 @@
-<h1>Chat</h1>
+<!-- Your EJS template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Application</title>
+  <!-- Add Bootstrap CSS, either by downloading it locally or linking to a CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div id="disconnection-message"></div>
+
+    <div id="welcome-message"></div>
+
+    <div class="row clearfix">
+        <div class="col-lg-12">
+            <div class="card chat-app">
+                <div id="plist" class="people-list">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><h4>Active users</h4></i></span>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled chat-list mt-2 mb-0">
+                        <li class="clearfix">
+                            <div class="about">
+                                <div class="inbox__people"></div>                                           
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chat">
+                    <div class="chat-header clearfix">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h5>Online</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-history">
+                        <ul class="m-b-0">
+                            <li class="clearfix">
+                                <div class="messages__history"></div>
+                                <div class="fallback"></div>
+                                <div class="inbox__messages">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="chat-message clearfix">
+                        <div class="input-group mb-0">
+                            <form class="form-control message_form">
+                                <input type="text" class="form-control message_form__input" placeholder="Type a message" />
+                            </form>
+                            <div class="input-group-prepend">
+                                <button class="btn btn-primary message_form__button" type="submit">Enter</button>
+                            </div>                                 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <!-- Add Bootstrap and Socket.IO scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
